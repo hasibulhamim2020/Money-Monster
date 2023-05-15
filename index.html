@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4cef9cb72.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title> Money Monster</title>
+</head>
+<body class="bg-gradient-to-r from-green-300 via-lime-300 to-emerald-200 m-6">
+    <header class="m-8 text-center">
+        <h1 class="text-5xl font-extrabold from-inherit text-blue-600 drop-shadow-lg">Money Management Calculator</h1>
+    </header>
+
+
+    <main>
+        <div>
+            <div class="grid grid-cols-5 gap-10">
+                <div id="carouselExampleAutoplaying" class="carousel slide col-span-3 " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/wallet-g1c21fe53b_1280.jpg" class="d-block w-100 rounded-lg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/money-g306377a88_1280.jpg" class="d-block w-100  rounded-lg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/money-g0f7eaedf1_1280.jpg" class="d-block w-100  rounded-lg" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <div class="my-bg col-span-2 p-4 text-xl font-semibold rounded-lg">
+                    <div class="text-center ">
+                        <h1 class="mb-3 text-2xl">Income  <i class="fa-regular fa-credit-card"></i></h1>
+                        <div class="mb-3">
+                            <h3 class="inline mr-2">Income: </h3>
+                            <input id="income-field" class="rounded-lg px-4 py-1" type="number" name=""  placeholder="Your sallary.">
+                        </div>
+                        <h1 class="mb-3 text-2xl">Expanses <i class="fa-solid fa-hand-holding-dollar"></i></h1>
+                        <div class="mb-3">
+                            <h3 class="inline mr-2">Food: </h3>
+                            <input class="rounded-lg px-4 py-1" type="number" name="" id="food-field" placeholder="Your food cost.">
+                        </div>
+                        <div class="mb-3">
+                            <h3 class="inline mr-2">Rent: </h3>
+                            <input class="rounded-lg px-4 py-1" type="number" name="" id="rent-field" placeholder="Your rent amount.">
+                        </div>
+                        <div class="mb-3">
+                            <h3 class="inline mr-2">Cloths: </h3>
+                            <input class=" rounded-lg px-4 py-1" type="number" name="" id="cloths-field" placeholder="Your cloths cost.">
+                        </div>
+                        <button id="calculate-btn" class="mb-4 text-2xl bg-lime-400 hover:bg-lime-500 px-3 py-1 rounded-lg" type="submit">Calculate Expenses <i class="fa-solid fa-hand-holding-dollar"></i></button>
+                        <h1 class="mb-2 text-2xl">
+                            <i class="fa-solid fa-file-invoice-dollar"></i> Total Expanses : <span id="total-expanses">00</span>
+                        </h1>
+                        <h1 class="mb-5 text-2xl">
+                            <i class="fa-solid fa-receipt"></i> Balance : <span id="balance">00</span>
+                        </h1>
+                        <div class="mb-5">
+                            <h1 class="inline mr-2">Save:</h1>
+                            <input class="rounded-lg inline px-4 py-1" style="width: 200px;" type="number" name="" id="save-field" placeholder="amount in persent">
+                            <h1 class="inline mr-2">%</h1>
+                           <button id="save-btn" class="inline bg-lime-400 hover:bg-lime-500 px-3 py-1 rounded-lg" type="submit">Save <i class="fa-solid fa-sack-dollar"></i></button>
+                        </div>
+                        <h1 class="mb-3 text-2xl">
+                            <i class="fa-solid fa-sack-dollar"></i> Saving Amount : <span id="save-amount">00</span>
+                        </h1>
+                        <h1 class="text-2xl">
+                            <i class="fa-solid fa-circle-dollar-to-slot"></i> Remaining Balance : <span id="remain-bal">00</span>
+                        </h1>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
